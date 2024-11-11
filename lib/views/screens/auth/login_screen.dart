@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:movies_buzz/services/extensions.dart';
+import 'package:movies_buzz/views/screens/auth/otp_screen.dart';
 
 import '../../../controllers/auth_controller.dart';
 import '../../../services/input_decoration.dart';
@@ -15,7 +16,7 @@ import '../../base/custom_image.dart';
 import '../../base/snack_bar.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -55,14 +56,14 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 Text(
                   'Welcome to Movies Buzz – Dive into the world of cinema with details on every film, from blockbusters to hidden gems. Your ultimate movie companion awaits!',
-                  textAlign: TextAlign.center,
+                  textAlign: TextAlign.start,
                   style: Theme.of(context)
                       .textTheme
                       .labelMedium!
                       .copyWith(fontWeight: FontWeight.w700),
                 ),
 
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Form(
@@ -101,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       });
                     },
                     decoration: CustomDecoration.inputDecoration(
-                      prefixWidget: Text(
+                      prefixWidget: const Text(
                         '+91 | ',
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.bold),
@@ -127,6 +128,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     elevation: 0,
                     onTap: _showButton
                         ? () async {
+                            Navigator.push(context,
+                                getCustomRoute(child: const OTPScreen()));
+
                             // authController.generateOTP(mobile: Get.find<FirebaseController>().phone.text).then((value) {
                             //   if (value.isSuccess) {
                             //     Navigator.push(context, getCustomRoute(child: OtpScreen()));
@@ -149,7 +153,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 if (Platform.isAndroid)
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                 // Container(
@@ -197,7 +201,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       foregroundColor: Colors.black,
                     ),
                   ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
                 RichText(
@@ -219,7 +223,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             // );
                           },
                         text: 'Terms & Conditions',
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.red, // Change color to red
                           fontWeight: FontWeight.bold, // Add bold style
                         ),
@@ -239,7 +243,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             // );
                           },
                         text: 'Privacy Policy',
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.red, // Change color to red
                           fontWeight: FontWeight.bold, // Add bold style
                         ),
