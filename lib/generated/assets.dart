@@ -2,6 +2,7 @@
 class Assets {
   Assets._();
 
+  static const String iconsGoogle = 'assets/icons/google.png';
   static const String iconsHome = 'assets/icons/home.png';
   static const String iconsHomeOutline = 'assets/icons/home_outline.png';
   static const String iconsHomefilled = 'assets/icons/homefilled.png';
