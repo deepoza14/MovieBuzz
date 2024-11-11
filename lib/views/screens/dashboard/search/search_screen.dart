@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:movies_buzz/services/input_decoration.dart';
 
 import '../../../../services/route_helper.dart';
 import '../../../../services/theme.dart';
@@ -17,9 +18,36 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        leading: IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.menu,
+              color: Colors.black,
+            )),
+        title: Text(
+          "Movie Buzz",
+          style: Theme.of(context)
+              .textTheme
+              .titleMedium!
+              .copyWith(color: Colors.black),
+        ),
+      ),
       body: SafeArea(
           child: Column(
         children: [
+          const SizedBox(height: 5),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: TextFormField(
+              decoration: CustomDecoration.inputDecoration(
+                label: 'Search',
+                suffix: Icon(Icons.search),
+              ),
+            ),
+          ),
+          const SizedBox(height: 15),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Row(
