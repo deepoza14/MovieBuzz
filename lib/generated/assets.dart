@@ -7,6 +7,8 @@ class Assets {
   static const String iconsHomefilled = 'assets/icons/homefilled.png';
   static const String iconsPassword = 'assets/icons/password.png';
   static const String iconsProfileCircle = 'assets/icons/profile_circle.png';
+  static const String imagesApplogo = 'assets/images/applogo.jpg';
+  static const String imagesApplogowithoutbg = 'assets/images/applogowithoutbg.png';
   static const String imagesExclaim = 'assets/images/exclaim.png';
   static const String imagesExitdialogcheck = 'assets/images/exitdialogcheck.jpg';
   static const String imagesPlaceholder = 'assets/images/placeholder.jpg';
