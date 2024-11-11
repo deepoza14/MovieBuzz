@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:movies_buzz/services/theme.dart';
 import 'package:movies_buzz/views/screens/dashboard/dashboard_screen.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
@@ -47,6 +48,13 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
       ),
       backgroundColor: Colors.white,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CustomImage(path: Assets.imagesApplogowithoutbg, color: primaryColor),
+        ],
+      ),
     );
   }
 }
