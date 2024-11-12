@@ -117,9 +117,9 @@ class _IntroScreenState extends State<IntroScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           child: Row(
             children: [
-
               Expanded(
-                child: CustomButton(type: ButtonType.secondary,
+                child: CustomButton(
+                  type: ButtonType.secondary,
                   height: 50,
                   radius: 20,
                   onTap: _onSkip,

@@ -109,11 +109,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
               GestureDetector(
                 onTap: () {
                   Navigator.push(
-                      context, getCustomRoute(child: LanguageScreen()));
+                      context, getCustomRoute(child: const LanguageScreen()));
                 },
                 child: Row(
                   children: [
-                    Icon(IconlyLight.document),
+                    const Icon(IconlyLight.document),
                     const SizedBox(width: 15),
                     Expanded(
                       child: Text(
