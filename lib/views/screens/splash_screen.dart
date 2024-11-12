@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:movies_buzz/services/theme.dart';
+import 'package:movies_buzz/views/screens/auth/login_screen.dart';
 import 'package:movies_buzz/views/screens/dashboard/dashboard_screen.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
@@ -15,6 +16,7 @@ import '../base/custom_image.dart';
 import '../base/dialogs/maintenance_dialog.dart';
 import '../base/dialogs/update_dialog.dart';
 import 'dashboard/home/home_screen.dart';
+import 'dashboard/profile/language_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
